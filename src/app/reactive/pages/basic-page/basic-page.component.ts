@@ -48,7 +48,11 @@ export class BasicPageComponent implements OnInit {
     );
   }
 
-
+/**
+ * 
+ * @param field el nombre del formControlName de myForm
+ * @returns el mensaje de validacion para el <span/>
+ */
   getFieldError(field: string): string | null{
     if(!this.myForm.controls[field]) return null; //?Si el formulario no tiene el valor del control lo retorno como null
     const errors = this.myForm.controls[field].errors || {};
